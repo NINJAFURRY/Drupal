@@ -1,3 +1,5 @@
+"""bash
+
 Drupal
 Step 1 
 Pull imges from docker hub 
@@ -13,3 +15,4 @@ Configure drupal server
 
 Step 4 
 connect to the server
+"""
