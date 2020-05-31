@@ -1,0 +1,22 @@
+version: '3'
+services:
+ dbos:
+  image: mysql:latest
+  restart: always
+  environment:
+     MYSQL_ROOT_PASSWORD: rootpass
+     MYSQL_USER: ninja
+     MYSQL_PASSWORD: redhat
+     mysql_database: mydb
+  volumes:
+    - mysql_storage:/var/lib/mysql
+ drupal:
+   image: drupal:latest
+   restart: always
+   environment:
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: ninja
+      MYSQL_PASSWORD: redhat
+      MYSQL_ROOT_PASSWORD: rootpass
+volumes:
+  mysql_storage:
